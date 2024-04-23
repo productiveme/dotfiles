@@ -8,3 +8,5 @@
 	submoduleSummary = true
 [diff]
 	submodule = log
+[core]
+	editor = nvim
