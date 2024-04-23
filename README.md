@@ -13,3 +13,9 @@ This repository helps me configure my Mac to get productive fast.
 - tmux
 - neovim
 - starship (prompt)
+
+## TODO
+
+- [ ] Create a better README!
+
+
