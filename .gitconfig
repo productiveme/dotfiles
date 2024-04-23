@@ -1,6 +1,3 @@
-[user]
-	name = Jaco Swarts
-	email = jaco@productive.me
 [alias]
 	co = checkout
 	up = push -u origin HEAD
