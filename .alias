@@ -2,3 +2,8 @@ alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;'
 alias pwdenv='read -sr OS_PWD && export OS_PWD'
 alias rosetta='function _rosetta(){ arch -x86_64 $@ }; _rosetta'
 alias n=nvim
+alias vi=nvim
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
