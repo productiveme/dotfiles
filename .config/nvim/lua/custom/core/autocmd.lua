@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- Global function to create a github issue from buffer contents
+-- Create a github issue from buffer contents
 function CreateGHIssue()
   vim.cmd("tabedit! .gh-issue-create.md")
   local current_buf = vim.api.nvim_get_current_buf()
