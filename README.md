@@ -1,4 +1,4 @@
-# Productive.me DOTFILES
+# Productive.me DOTFILES (README is WIP)
 
 This repository helps me configure my Mac to get productive fast.
 
