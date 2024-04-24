@@ -29,7 +29,6 @@ load-nvmrc() {
     nvm use default
   fi
 }
-add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 # Android dev
@@ -46,7 +45,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export PATH=$HOME/.meteor:$PATH
 
 # History
-HISTFILE=~/.zsh_history
+HISTFILE=~/.history
 SAVEHIST=1000
 setopt appendhistory
 setopt sharehistory
