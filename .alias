@@ -1,9 +1,20 @@
-alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;'
-alias pwdenv='read -sr OS_PWD && export OS_PWD'
-alias rosetta='function _rosetta(){ arch -x86_64 $@ }; _rosetta'
-alias n=nvim
-alias vi=nvim
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-
+alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;'
+# Password usage without history
+alias pwdenv='read -sr OS_PWD && export OS_PWD'
+# Rosetta
+alias rosetta='function _rosetta(){ arch -x86_64 $@ }; _rosetta'
+# Neovim
+alias n=nvim
+alias vi=nvim
+alias vim="nvim"
+alias oldvim="vim"
+alias vimdiff='nvim -d'
+export EDITOR=nvim
+# Android Development
+alias droid='emulator -avd `emulator -list-avds | head -n 2` &'
+alias loadapp='adb install -r'
+# JSON Calc https://www.npmjs.com/package/jsoncalc
+alias jsonc='function _jsonc(){ (for i in $@; do :; done; code $i && jsoncalc $@) }; _jsonc'
