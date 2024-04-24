@@ -25,7 +25,7 @@ function CreateGHIssue()
       vim.schedule(function()
         vim.api.nvim_command(cmd)
         vim.schedule(function()
-          vim.api.nvim_command("!rm .gh-issue-create.md")
+          vim.api.nvim_command("!rm .gh-issue-create.md > /dev/null 2>&1")
         end)
       end)
       if vim.api.nvim_get_current_buf() == current_buf then

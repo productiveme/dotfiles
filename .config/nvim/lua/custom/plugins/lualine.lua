@@ -53,6 +53,7 @@ return {
     lualine.setup({
       options = {
         theme = my_lualine_theme,
+        path = 1,
       },
       sections = {
         lualine_x = {
