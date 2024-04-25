@@ -23,10 +23,7 @@ function CreateGHIssue()
       local title = vim.api.nvim_buf_get_lines(current_buf, 0, 1, false)[1]
       local cmd = '!gh issue create -a "@me" -t "' .. title .. '" -F .gh-issue-create.md'
       vim.schedule(function()
-        vim.api.nvim_command(cmd)
-        vim.schedule(function()
-          vim.api.nvim_command("!rm .gh-issue-create.md > /dev/null 2>&1")
-        end)
+        vim.api.nvim_command(cmd .. " && rm .gh-issue-create.md")
       end)
       if vim.api.nvim_get_current_buf() == current_buf then
         vim.api.nvim_command("tabclose")
