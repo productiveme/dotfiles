@@ -17,6 +17,7 @@ return {
       ["<leader>n"] = { name = "[N]o [H]ighlights", _ = "which_key_ignore" },
       ["<leader>d"] = { name = "[D][B] UI Toggle", _ = "which_key_ignore" },
       ["<leader>o"] = { name = "[O]bsidian", _ = "which_key_ignore" },
+      ["<leader>p"] = { name = "Har[p]oon", _ = "which_key_ignore" },
       ["<leader>r"] = { name = "[R]efactor", _ = "which_key_ignore" },
       ["<leader>x"] = { name = "Trouble [X]", _ = "which_key_ignore" },
       ["<leader>b"] = { name = "Split [B]uffer", _ = "which_key_ignore" },
