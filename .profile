@@ -44,6 +44,9 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 # Meteor dev
 export PATH=$HOME/.meteor:$PATH
 
+# Editor
+export EDITOR=nvim
+
 # History
 HISTFILE=~/.history
 SAVEHIST=1000

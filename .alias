@@ -12,9 +12,10 @@ alias vi=nvim
 alias vim="nvim"
 alias oldvim="vim"
 alias vimdiff='nvim -d'
-export EDITOR=nvim
 # Android Development
 alias droid='emulator -avd `emulator -list-avds | head -n 2` &'
 alias loadapp='adb install -r'
 # JSON Calc https://www.npmjs.com/package/jsoncalc
-alias jsonc='function _jsonc(){ (for i in $@; do :; done; code $i && jsoncalc $@) }; _jsonc'
+alias jsonc='function _jsonc(){ (for i in $@; do :; done; jsoncalc $@ & $EDITOR $i) }; _jsonc'
+compdef '_files -g "*.(json|yaml|yml)"' _jsonc
+
