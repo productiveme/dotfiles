@@ -5,6 +5,9 @@ return {
     event = "BufEnter",
   },
   {
+    "djoshea/vim-autoread",
+  },
+  {
     "tpope/vim-fugitive",
   },
   {
