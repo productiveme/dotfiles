@@ -4,7 +4,9 @@ echo "Only run this from within the dotfiles folder. Current folder is $(pwd)."
 echo "Press Ctrl-C to cancel or Enter to continue..."
 read -sr
 
-dotfiles=".alias .bashrc .gitconfig .config/nvim .config/tmux .profile .zshrc"
+mkdir -p "$HOME/.config"
+dotfiles=".alias .bashrc .gitconfig .config/starship.toml .config/nvim .config/tmux .profile .zshrc"
+
 #==============
 # Remove old dot flies
 #==============

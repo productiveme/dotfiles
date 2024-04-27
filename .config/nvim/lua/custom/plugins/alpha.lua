@@ -27,6 +27,10 @@ return {
       dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
     }
 
+    dashboard.section.footer.val = function()
+      return "[ " .. vim.fn.getcwd():match("[^/]*$"):upper() .. " ]"
+    end
+
     -- Send config to alpha
     alpha.setup(dashboard.opts)
 
