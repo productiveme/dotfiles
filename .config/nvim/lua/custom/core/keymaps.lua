@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap.set("v", "jk", "<ESC>", { desc = "Exit visual mode with jk" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search [H]ighlights" })
 
@@ -55,7 +56,7 @@ keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 keymap.set("", "<Esc>", "<ESC>:noh<CR>:NoiceDismiss<CR>", { silent = true })
 
 -- Show DBUI
-keymap.set("n", "<leader>db", "<cmd>DBUIToggle<cr>", { desc = "Toggle [D][B]UI" })
+keymap.set("n", "<leader>db", "<cmd>tabnew +DBUIToggle<cr>", { desc = "Toggle [D][B]UI" })
 
 -- Window navigation
 keymap.set("n", "<c-j>", "<cmd>wincmd j<cr>", { desc = "Move to window below" })
