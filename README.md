@@ -16,6 +16,7 @@ The following tools are required to get the best out of this configuration.
 | [ITerm2](https://iterm2.com/)                                              | `brew install iterm2`                                                                                          |
 | [tmux](https://github.com/tmux/tmux)                                       | `brew install tmux`                                                                                            |
 | [NeoVIM](https://neovim.io/)                                               | `brew install neovim`                                                                                          |
+| [universal ctags](https://github.com/universal-ctags/ctags)                | `brew install universal-ctags`                                                                                 |
 | [starship](https://starship.rs)                                            | `brew install starship`                                                                                        |
 | [gh](https://github.com/cli/cli)                                           | `brew install gh`                                                                                              |
 | [git removed-branches](https://github.com/nemisj/git-removed-branches)     | `npm install -g git-removed-branches`                                                                          |
