@@ -63,3 +63,8 @@ keymap.set("n", "<c-j>", "<cmd>wincmd j<cr>", { desc = "Move to window below" })
 keymap.set("n", "<c-k>", "<cmd>wincmd k<cr>", { desc = "Move to window above" })
 keymap.set("n", "<c-h>", "<cmd>wincmd h<cr>", { desc = "Move to window left" })
 keymap.set("n", "<c-l>", "<cmd>wincmd l<cr>", { desc = "Move to window right" })
+
+-- Close all
+keymap.set("n", "<C-d>", "<cmd>qa<cr>", { desc = "Close all" })
+keymap.set("v", "<C-d>", "<cmd>qa<cr>", { desc = "Close all" })
+keymap.set("i", "<C-d>", "<cmd>qa<cr>", { desc = "Close all" })
