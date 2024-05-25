@@ -14,3 +14,6 @@
 	rebase = false
 [safe]
 	directory = /Users/jacoswarts/notes
+[user]
+	name = Jaco Swarts
+	email = jaco@productive.me
