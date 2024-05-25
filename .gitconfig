@@ -12,3 +12,5 @@
 	excludesFile = /Users/jacoswarts/.gitignore_global
 [pull]
 	rebase = false
+[safe]
+	directory = /Users/jacoswarts/notes
