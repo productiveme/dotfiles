@@ -13,3 +13,4 @@ add-zsh-hook chpwd load-nvmrc
 
 source "$HOME"/.alias
 source "$HOME"/.private
+export PATH=/Users/jacoswarts/.meteor:$PATH
