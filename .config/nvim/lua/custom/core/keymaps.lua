@@ -11,6 +11,8 @@ keymap.set("n", "x", '"_x')
 
 keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
 
+keymap.set("i", "<Right>", "<C-O>l")
+
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
