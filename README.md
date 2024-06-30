@@ -20,6 +20,7 @@ The following tools are required to get the best out of this configuration.
 | [starship](https://starship.rs)                                            | `brew install starship`                                                                                        |
 | [gh](https://github.com/cli/cli)                                           | `brew install gh`                                                                                              |
 | [git removed-branches](https://github.com/nemisj/git-removed-branches)     | `npm install -g git-removed-branches`                                                                          |
+| [sdkman](https://github.com/sdkman/sdkman-cli) & java                      | `curl -s "https://get.sdkman.io" \| bash` `sdkman install java 21` `sdkman install maven`                      |
 
 - [Install a Nerd font and set it in your terminal](https://www.nerdfonts.com/font-downloads)  
   E.g. FiraCode Nerd Font
