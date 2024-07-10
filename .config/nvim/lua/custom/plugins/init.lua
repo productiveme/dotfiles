@@ -8,6 +8,9 @@ return {
     "djoshea/vim-autoread",
   },
   {
+    "tpope/vim-rhubarb",
+  },
+  {
     "tpope/vim-fugitive",
   },
   {
