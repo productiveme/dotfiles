@@ -1,6 +1,9 @@
 return {
   "goolord/alpha-nvim",
   event = "VimEnter",
+  opts = {
+    redraw_on_resize = false,
+  },
   config = function()
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
