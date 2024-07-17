@@ -18,4 +18,7 @@ return {
   {
     "folke/twilight.nvim",
   },
+  {
+    "echasnovski/mini.icons",
+  },
 }
