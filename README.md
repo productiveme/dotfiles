@@ -26,6 +26,8 @@ The following tools are required to get the best out of this configuration.
 - [Install a Nerd font and set it in your terminal](https://www.nerdfonts.com/font-downloads)  
   E.g. FiraCode Nerd Font
 
+- Optional: [Set up Open with ... for Neovim](https://gist.github.com/rpapallas/31dfdf0626d078a357fccd46cdf6eafd)
+
 ## Setup
 
 1. Install the dependencies above.
