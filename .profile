@@ -74,3 +74,5 @@ export LANG=en_US.UTF-8
 
 source "$HOME/.alias"
 source "$HOME/.private"
+
+eval "$(rbenv init -)"
