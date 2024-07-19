@@ -21,9 +21,12 @@ The following tools are required to get the best out of this configuration.
 | [gh](https://github.com/cli/cli)                                           | `brew install gh`                                                                                              |
 | [git removed-branches](https://github.com/nemisj/git-removed-branches)     | `npm install -g git-removed-branches`                                                                          |
 | [sdkman](https://github.com/sdkman/sdkman-cli) & java                      | `curl -s "https://get.sdkman.io" \| bash` `sdkman install java 21` `sdkman install maven`                      |
+| Ruby 3+                                                                    | `brew install rbenv` <br/> `rbenv install 3.4.4` <br/> `rbenv global 3.4.4`                                    |
 
 - [Install a Nerd font and set it in your terminal](https://www.nerdfonts.com/font-downloads)  
   E.g. FiraCode Nerd Font
+
+- Optional: [Set up Open with ... for Neovim](https://gist.github.com/rpapallas/31dfdf0626d078a357fccd46cdf6eafd)
 
 ## Setup
 
