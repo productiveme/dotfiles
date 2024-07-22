@@ -26,6 +26,12 @@ return {
       git_files = {
         path_display = filenameFirst,
       },
+      live_grep = {
+        path_display = filenameFirst,
+      },
+      grep_string = {
+        path_display = filenameFirst,
+      },
     },
   }),
 }
