@@ -32,3 +32,7 @@ touch $HOME/.private
 #==============
 chsh -s /bin/zsh
 
+#==============
+# Restore iTerm profile
+#==============
+cp -f "$(pwd)/com.googlecode.iterm2.plist" "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
