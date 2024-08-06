@@ -12,3 +12,6 @@
 	excludesFile = /Users/jacoswarts/.gitignore_global
 [pull]
 	rebase = false
+[user]
+	name = Jaco Swarts
+	email = jaco@vatfree.com

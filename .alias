@@ -19,3 +19,33 @@ alias loadapp='adb install -r'
 alias jsonc='function _jsonc(){ (for i in $@; do :; done; jsoncalc $@ & $EDITOR $i) }; _jsonc'
 compdef '_files -g "*.(json|yaml|yml)"' _jsonc
 
+# Custom functions
+function fn_broken_symlinks () {
+  find . -type l ! -exec test -e {} \; -print
+}
+
+function fn_git_dirty_subfolders () {
+  find . -type d -name '.git' -execdir bash -c "git status --porcelain | grep -q ." \; -execdir pwd \;
+}
+
+function _fn_replace_part_of_symlink () {
+  old_path=$(stat -f %Y "$3")
+  new_path=$(echo "$old_path" | awk -v val="$1" -v new="$2" '{ gsub(val, new); print }')
+  ln -sfn "$new_path" "$3"
+}
+
+function fn_replace_part_of_symlink() {
+  if [[ -p /dev/stdin ]]; then
+    while IFS= read -r f; do
+      _fn_replace_part_of_symlink "$1" "$2" "$f"
+    done
+  else
+    _fn_replace_part_of_symlink "$1" "$2" "$3"
+  fi
+}
+
+function fn_replace_with_git_submodule() {
+  git rm $1; rm -rf $1
+  git submodule add git@github.com:vatfree/${2:-$1}.git $1
+}
+
