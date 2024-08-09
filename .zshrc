@@ -21,5 +21,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH=$HOME/.meteor:$PATH
 
 if [ -z "$TMUX" ]; then
-    tmux
+    if tmux has-session 2>/dev/null; then
+        tmux attach
+    else
+        tmux
+    fi
 fi
