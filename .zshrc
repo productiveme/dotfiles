@@ -15,11 +15,6 @@ source "$HOME"/.alias
 source "$HOME"/.private
 export PATH=$HOME/.meteor:$PATH
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export PATH=$HOME/.meteor:$PATH
-
 if [ -z "$TMUX" ]; then
     if tmux has-session 2>/dev/null; then
         tmux attach
@@ -27,3 +22,7 @@ if [ -z "$TMUX" ]; then
         tmux
     fi
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
