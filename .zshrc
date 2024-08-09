@@ -15,6 +15,7 @@ source "$HOME"/.alias
 source "$HOME"/.private
 export PATH=$HOME/.meteor:$PATH
 
+# Auto run and attach tmux
 if [ -z "$TMUX" ]; then
     if tmux has-session 2>/dev/null; then
         tmux attach
