@@ -15,6 +15,7 @@ require("lazy").setup({ { import = "custom.plugins" }, { import = "custom.plugin
   checker = {
     enabled = true,
     notify = false,
+    check_pinned = true,
   },
   change_detection = {
     notify = false,
