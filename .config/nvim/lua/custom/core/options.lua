@@ -1,4 +1,5 @@
 vim.cmd("let g:netrw_liststyle = 3")
+vim.cmd("set ve+=onemore")
 
 local opt = vim.opt
 
