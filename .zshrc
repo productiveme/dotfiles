@@ -13,6 +13,8 @@ export LANG=en_US.utf8
 source "$HOME/.profile"
 add-zsh-hook chpwd load-nvmrc
 
+export PATH=$HOME/.local/bin:$PATH
+
 source "$HOME"/.alias
 source "$HOME"/.private
 export PATH=$HOME/.meteor:$PATH
