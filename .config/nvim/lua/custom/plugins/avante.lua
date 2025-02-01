@@ -6,7 +6,7 @@ return {
   opts = {
     -- add any opts here
     provider = "o3mini", -- "lmstudio",
-    auto_suggestions_provider = "deepseek", -- Since auto-suggestions are a high-frequency operation and therefore expensive, it is recommended to specify an inexpensive provider or even a free provider: copilot
+    auto_suggestions_provider = "o3mini", -- Since auto-suggestions are a high-frequency operation and therefore expensive, it is recommended to specify an inexpensive provider or even a free provider: copilot
     vendors = {
       o1mini = {
         __inherited_from = "openai",
