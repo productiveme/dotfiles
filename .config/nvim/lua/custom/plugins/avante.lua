@@ -47,7 +47,7 @@ return {
   },
   -- if you want to build from source then do `make build_from_source=true`
   build = "make",
-  -- build = "powershell -executionpolicy bypass -file build.ps1 -buildfromsource false" -- for windows
+  -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
   dependencies = {
     "stevearc/dressing.nvim",
     "nvim-lua/plenary.nvim",
