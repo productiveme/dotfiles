@@ -36,12 +36,12 @@ return {
       deepseek = {
         provider = "openai",
         endpoint = "https://api.deepseek.com/v1",
-        model = "deepseek-chat",
         timeout = 30000, -- timeout in milliseconds
         temperature = 0,
         max_tokens = 4096,
         -- optional
         api_key_name = "DEEPSEEK_API_KEY", -- default openai_api_key if not set
+        model = "deepseek-r1",
       },
     },
   },
