@@ -36,18 +36,18 @@ return {
       deepseek = {
         provider = "openai",
         endpoint = "https://api.deepseek.com/v1",
-        model = "deepseek-chat",
         timeout = 30000, -- timeout in milliseconds
         temperature = 0,
         max_tokens = 4096,
         -- optional
         api_key_name = "DEEPSEEK_API_KEY", -- default openai_api_key if not set
+        model = "deepseek-r1",
       },
     },
   },
   -- if you want to build from source then do `make build_from_source=true`
   build = "make",
-  -- build = "powershell -executionpolicy bypass -file build.ps1 -buildfromsource false" -- for windows
+  -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
   dependencies = {
     "stevearc/dressing.nvim",
     "nvim-lua/plenary.nvim",
