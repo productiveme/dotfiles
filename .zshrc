@@ -19,10 +19,16 @@ export PATH=$HOME/.meteor:$PATH
 
 # Auto run and attach tmux
 if [ -z "$TMUX" ]; then
-    if tmux has-session 2>/dev/null; then
-        tmux attach
-    else
-        tmux
+    if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+        if tmux has-session 2>/dev/null; then
+            if [ "$(tmux list-clients 2>/dev/null | wc -l)" -gt 0 ]; then
+                :
+            else
+                tmux attach
+            fi
+        else
+            tmux
+        fi
     fi
 fi
 
@@ -38,4 +44,3 @@ export PATH=$HOME/.meteor:$PATH
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
-
