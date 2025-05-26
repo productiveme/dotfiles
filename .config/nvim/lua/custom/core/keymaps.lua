@@ -71,13 +71,19 @@ keymap.set("n", "<C-d>", "<cmd>qa<cr>", { desc = "Close all" })
 keymap.set("v", "<C-d>", "<cmd>qa<cr>", { desc = "Close all" })
 keymap.set("i", "<C-d>", "<cmd>qa<cr>", { desc = "Close all" })
 
--- Codeium
-keymap.set("n", "<leader>cc", function()
-  return vim.fn["codeium#Chat"]()
-end, { desc = "[C]odeium [C]hat", expr = true, silent = true })
-keymap.set("i", "<C-.>", function()
-  return vim.fn["codeium#CycleCompletions"](1)
-end, { expr = true, silent = true })
+-- -- Codeium
+-- keymap.set("n", "<leader>cc", function()
+--   return vim.fn["codeium#Chat"]()
+-- end, { desc = "[C]odeium [C]hat", expr = true, silent = true })
+-- keymap.set("i", "<C-.>", function()
+--   return vim.fn["codeium#CycleCompletions"](1)
+-- end, { expr = true, silent = true })
+
+-- -- CodeCompanion
+-- keymap.set("n", "<leader>aa", ":CodeCompanionChat Toggle<cr>", { desc = "Toggle CodeCompanion Chat" })
+
+keymap.set("n", "<A-o>", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
+keymap.set("n", "<A-i>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 
 -- Folding shortcut
 keymap.set("n", "zz", "zA", { desc = "Toggle fold" })
