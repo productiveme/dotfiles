@@ -23,6 +23,16 @@ The following tools are required to get the best out of this configuration.
 | [sdkman](https://github.com/sdkman/sdkman-cli) & java                      | `curl -s "https://get.sdkman.io" \| bash` `sdkman install java 21` `sdkman install maven`                      |
 | Ruby 3+                                                                    | `brew install rbenv` <br/> `rbenv install 3.4.4` <br/> `rbenv global 3.4.4`                                    |
 
+### Quick Install with Brewfile
+
+Many of the Homebrew dependencies can be installed at once using the included Brewfile:
+
+```bash
+brew bundle --file ~/.dotfiles/Brewfile
+```
+
+This will install: direnv, ripgrep, tmux, neovim, universal-ctags, starship, gh, rbenv, and Ghostty.
+
 - [Install a Nerd font and set it in your terminal](https://www.nerdfonts.com/font-downloads)  
   E.g. JetBrainsMono Nerd Font
 
@@ -30,15 +40,17 @@ The following tools are required to get the best out of this configuration.
 
 ## Setup
 
-1. Install the dependencies above.
+1. Install the dependencies above (either individually or using `brew bundle`).
 2. Clone this repo to your home folder
 
 ```bash
 git clone git@github.com:productiveme/dotfiles.git ~/.dotfiles
 ```
 
-3. Run the install script from within the `.dotfiles` folder
+3. Run the install script from within the `.dotfiles` folder to create symlinks
 
 ```bash
 (cd ~/.dotfiles && bash install.sh)
 ```
+
+Note: The install script only creates symlinks to the configuration files. You must install the required dependencies separately before running it.
