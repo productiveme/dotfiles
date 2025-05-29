@@ -5,7 +5,7 @@ echo "Press Ctrl-C to cancel or Enter to continue..."
 read -sr
 
 mkdir -p "$HOME/.config"
-dotfiles=".alias .bashrc .gitconfig .config/starship.toml .config/nvim .config/tmux .profile .zshrc"
+dotfiles=".alias .bashrc .gitconfig .config/starship.toml .config/nvim .config/tmux .config/ghostty .profile .zshrc"
 
 #==============
 # Remove old dot flies
