@@ -4,6 +4,39 @@ echo "Only run this from within the dotfiles folder. Current folder is $(pwd)."
 echo "Press Ctrl-C to cancel or Enter to continue..."
 read -sr
 
+#==============
+# Install prerequisites if not already installed
+#==============
+
+# Check and install Git with XCode command line tools
+if ! command -v git &> /dev/null; then
+    echo "Installing Git with XCode command line tools..."
+    xcode-select --install
+    echo "Please complete the XCode command line tools installation and run this script again."
+    exit 1
+fi
+
+# Check and install Homebrew
+if ! command -v brew &> /dev/null; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # Add Homebrew to PATH for the current session
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Check and install nvm/NodeJS
+if ! command -v nvm &> /dev/null && [ ! -s "$HOME/.nvm/nvm.sh" ]; then
+    echo "Installing NodeJS with nvm..."
+    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
+    # Source nvm for the current session
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    # Install latest LTS Node
+    nvm install --lts
+    nvm use --lts
+fi
+
 mkdir -p "$HOME/.config"
 dotfiles=".alias .bashrc .gitconfig .config/starship.toml .config/nvim .config/tmux .config/ghostty .profile .zshrc"
 
