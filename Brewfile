@@ -12,4 +12,5 @@ brew "gh"
 brew "rbenv"
 
 # Applications
+cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"

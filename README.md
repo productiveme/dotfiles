@@ -8,9 +8,6 @@ The following tools are required to get the best out of this configuration.
 
 | Name                                                                       | Install Command                                                                                                |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| [Git](https://git-scm.com/) with XCode command line tools                  | `xcode-select --install`                                                                                       |
-| [NodeJS](https://nodejs.org/en/) with [nvm](https://github.com/nvm-sh/nvm) | `PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh \| bash'` |
-| [Homebrew](https://brew.sh)                                                | `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`              |
 | [direnv](https://direnv.net/)                                              | `brew install direnv`                                                                                          |
 | [ripgrep](https://github.com/BurntSushi/ripgrep)                           | `brew install ripgrep`                                                                                         |
 | [ITerm2](https://iterm2.com/)                                              | `brew install iterm2`                                                                                          |
@@ -23,34 +20,25 @@ The following tools are required to get the best out of this configuration.
 | [sdkman](https://github.com/sdkman/sdkman-cli) & java                      | `curl -s "https://get.sdkman.io" \| bash` `sdkman install java 21` `sdkman install maven`                      |
 | Ruby 3+                                                                    | `brew install rbenv` <br/> `rbenv install 3.4.4` <br/> `rbenv global 3.4.4`                                    |
 
-### Quick Install with Brewfile
-
-Many of the Homebrew dependencies can be installed at once using the included Brewfile:
-
-```bash
-brew bundle --file ~/.dotfiles/Brewfile
-```
-
-This will install: direnv, ripgrep, tmux, neovim, universal-ctags, starship, gh, rbenv, and Ghostty.
-
-- [Install a Nerd font and set it in your terminal](https://www.nerdfonts.com/font-downloads)  
-  E.g. JetBrainsMono Nerd Font
-
-- Optional: [Set up Open with ... for Neovim](https://gist.github.com/rpapallas/31dfdf0626d078a357fccd46cdf6eafd)
-
 ## Setup
 
-1. Install the dependencies above (either individually or using `brew bundle`).
-2. Clone this repo to your home folder
+1. Clone this repo to your home folder
 
 ```bash
 git clone git@github.com:productiveme/dotfiles.git ~/.dotfiles
 ```
 
-3. Run the install script from within the `.dotfiles` folder to create symlinks
+2. Run the install script from within the `.dotfiles` folder
 
 ```bash
 (cd ~/.dotfiles && bash install.sh)
 ```
 
-Note: The install script only creates symlinks to the configuration files. You must install the required dependencies separately before running it.
+The install script will automatically:
+- Install Git with XCode command line tools (if not already installed)
+- Install Homebrew (if not already installed)
+- Install NodeJS with nvm (if not already installed)
+- Install other dependencies via `brew bundle`
+- Create symlinks to configuration files
+
+Note: If Git is not installed, the script will prompt you to complete the XCode command line tools installation and run the script again.
