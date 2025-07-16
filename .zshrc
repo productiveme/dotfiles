@@ -46,3 +46,6 @@ export PATH=$HOME/.meteor:$PATH
 export PATH="$PATH:$HOME/.lmstudio/bin"
 
 export PATH="$PATH:$HOME/.local/bin"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
