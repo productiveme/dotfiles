@@ -6,7 +6,7 @@ if [ $TERM_PROGRAM != "Apple_Terminal" ]; then
 fi
 # Partial completion for zsh
 autoload -Uz compinit
-compinit
+compinit -u
 # Ensure LANG for tmux icons
 export LANG=en_US.utf8
 
@@ -49,3 +49,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/jaco/.lmstudio/bin"
+# End of LM Studio CLI section
