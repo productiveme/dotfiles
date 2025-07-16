@@ -49,4 +49,6 @@ function fn_replace_with_git_submodule() {
   git submodule add git@github.com:vatfree/${2:-$1}.git $1
 }
 
-alias ai="aider --editor-model openai/o3-mini --model claude-3-7-sonnet-latest --no-auto-commit --auto-lint --no-show-model-warnings"
+# alias ai="aider --editor-model openai/o3-mini --model claude-3-7-sonnet-latest --no-auto-commit --auto-lint --no-show-model-warnings"
+alias ai="opencode"
+
