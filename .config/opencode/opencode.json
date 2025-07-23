@@ -3,6 +3,41 @@
   "theme": "system",
   "autoupdate": true,
   "keybinds": {
-    "leader": "ctrl+a"
+    "leader": "ctrl+a",
+    "messages_previous": "ctrl+alt+k",
+    "messages_next": "ctrl+alt+j"
+  },
+  "mcp": {
+    "mongodb": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "mongodb-mcp-server",
+        "--connectionString",
+        "mongodb://localhost:27017",
+        "--readonly"
+      ],
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp@latest", "--isolated"],
+      "enabled": true
+    },
+    "sequential-thinking": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "enabled": true
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    }
   }
 }
