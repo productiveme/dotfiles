@@ -51,7 +51,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$HOME/.opencode/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/jaco/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
