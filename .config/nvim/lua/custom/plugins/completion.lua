@@ -1,9 +1,5 @@
 return {
   {
-    "Exafunction/codeium.vim",
-    event = "BufEnter",
-  },
-  {
     "github/copilot.vim",
     event = "VimEnter",
     enabled = false,

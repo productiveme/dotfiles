@@ -10,6 +10,11 @@ compinit -u
 # Ensure LANG for tmux icons
 export LANG=en_US.utf8
 
+# pyenv
+export PYENV_ROOT="$HOME/.local/share/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 source "$HOME/.profile"
 add-zsh-hook chpwd load-nvmrc
 
