@@ -38,6 +38,7 @@ The install script will automatically:
 - Install Git with XCode command line tools (if not already installed)
 - Install Homebrew (if not already installed)
 - Install NodeJS with nvm (if not already installed)
+- Install tree-sitter CLI (if not already installed, required for Neovim syntax highlighting)
 - Install other dependencies via `brew bundle`
 - Create symlinks to configuration files
 
