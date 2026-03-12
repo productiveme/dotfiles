@@ -2,6 +2,8 @@ return {
   "nvim-treesitter/nvim-treesitter-textobjects",
   lazy = true,
   config = function()
+    -- Note: nvim-treesitter-textobjects still uses the legacy API
+    -- as it hasn't been updated for the new main branch yet
     require("nvim-treesitter.configs").setup({
       textobjects = {
         select = {

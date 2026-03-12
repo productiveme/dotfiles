@@ -8,7 +8,9 @@ return {
       "windwp/nvim-ts-autotag",
     },
     config = function()
-      require("nvim-treesitter").setup({
+      local ts = require("nvim-treesitter")
+      
+      ts.setup({
         ensure_installed = {
           "json",
           "javascript",
@@ -33,6 +35,9 @@ return {
           "java",
         },
       })
+      
+      -- Install parsers (required for new nvim-treesitter main branch)
+      ts.install()
     end,
   },
 }
