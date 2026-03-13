@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "master", -- Pin to master branch (old stable API)
     lazy = false,
     priority = 1000,
     build = ":TSUpdate",
@@ -8,9 +9,22 @@ return {
       "windwp/nvim-ts-autotag",
     },
     config = function()
-      local ts = require("nvim-treesitter")
-      
-      ts.setup({
+      -- import nvim-treesitter plugin
+      local treesitter = require("nvim-treesitter.configs")
+
+      -- configure treesitter
+      treesitter.setup({
+        -- enable syntax highlighting
+        highlight = {
+          enable = true,
+        },
+        -- enable indentation
+        indent = { enable = true },
+        -- enable autotagging (w/ nvim-ts-autotag plugin)
+        autotag = {
+          enable = true,
+        },
+        -- ensure these language parsers are installed
         ensure_installed = {
           "json",
           "javascript",
@@ -34,10 +48,16 @@ return {
           "c",
           "java",
         },
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = "<CR>",
+            node_incremental = "<TAB>",
+            scope_incremental = false,
+            node_decremental = "<S-TAB>",
+          },
+        },
       })
-      
-      -- Install parsers (required for new nvim-treesitter main branch)
-      ts.install()
     end,
   },
 }
