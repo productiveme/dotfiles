@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter-textobjects",
+  branch = "master", -- Pin to master branch to match nvim-treesitter
   lazy = true,
   config = function()
     -- Note: nvim-treesitter-textobjects still uses the legacy API
