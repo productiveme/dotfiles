@@ -77,6 +77,17 @@ if ! command -v tree-sitter &> /dev/null; then
 fi
 
 #==============
+# Install OpenCode CLI
+#==============
+if ! command -v opencode &> /dev/null; then
+    echo "Installing OpenCode CLI..."
+    # Source nvm if not already available
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    npm install -g @anomalyco/opencode
+fi
+
+#==============
 # Restore iTerm profile
 #==============
 cp -f "$(pwd)/com.googlecode.iterm2.plist" "$HOME/Library/Preferences/com.googlecode.iterm2.plist"

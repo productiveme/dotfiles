@@ -38,6 +38,8 @@ return {
         "prismals",
         "pyright",
       },
+      -- disable automatic_enable since we configure handlers manually in lspconfig.lua
+      automatic_installation = true,
     })
 
     mason_tool_installer.setup({
