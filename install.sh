@@ -88,6 +88,26 @@ if ! command -v opencode &> /dev/null; then
 fi
 
 #==============
+# Install tmux (if not already installed)
+#==============
+if ! command -v tmux &> /dev/null; then
+    echo "Installing tmux..."
+    brew install tmux
+fi
+
+#==============
+# Install TPM and tmux plugins
+#==============
+if [ ! -d "$HOME/.config/tmux/plugins/tpm" ]; then
+    echo "Installing TPM (Tmux Plugin Manager)..."
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.config/tmux/plugins/tpm"
+fi
+
+echo "Installing tmux plugins..."
+# Install plugins using TPM
+"$HOME/.config/tmux/plugins/tpm/bin/install_plugins"
+
+#==============
 # Restore iTerm profile
 #==============
 cp -f "$(pwd)/com.googlecode.iterm2.plist" "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
