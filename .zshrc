@@ -45,19 +45,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=$HOME/.meteor:$PATH
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:$HOME/.lmstudio/bin"
-
 export PATH="$PATH:$HOME/.local/bin"
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
 
-# Added by LM Studio CLI (lms)
+# LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
-# End of LM Studio CLI section
+
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
@@ -65,4 +60,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-export PATH="$HOME/.meteor:$PATH"

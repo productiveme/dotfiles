@@ -2,16 +2,27 @@
 	co = checkout
 	up = push -u origin HEAD
 	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	rmb = removed-branches --prune
-  dirty-submodules = !git submodule foreach --quiet 'git status --porcelain | grep -q . && echo "$path" || :'
+	rmb = removed-branches --prune --force
+	pp = pull -p
+	dirty-submodules = !git submodule foreach --quiet 'git status --porcelain | grep -q . && echo "$path" || :'
 [status]
 	submoduleSummary = true
 [diff]
 	submodule = log
 [core]
 	editor = nvim
+	excludesfile = ~/.gitignore_global
 [pull]
 	rebase = false
 [user]
-	name = Jaco Swarts
-	email = jaco@vatfree.com
+	name = productivejaco
+	email = jaco@productive.me
+[lfs "customtransfer.xet"]
+	path = git-xet
+	args = transfer
+	concurrent = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

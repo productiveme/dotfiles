@@ -37,13 +37,19 @@ if ! command -v nvm &> /dev/null && [ ! -s "$HOME/.nvm/nvm.sh" ]; then
     nvm use --lts
 fi
 
-mkdir -p "$HOME/.config"
-dotfiles=".alias .bashrc .gitconfig .config/starship.toml .config/nvim .config/tmux .config/ghostty .config/opencode .profile .zshrc .config/git"
+mkdir -p "$HOME/.config" "$HOME/.ssh" "$HOME/.config/gh"
+
+# Directory-level symlinks: the whole directory lives in the repo
+dotfiles=".alias .bashrc .gitconfig .gitignore_global .config/starship.toml .config/nvim .config/tmux .config/ghostty .config/opencode .config/git .profile .zshrc"
+
+# File-level symlinks: the parent directory holds machine-local state we must not
+# clobber (e.g. ~/.config/gh/hosts.yml, ~/.ssh/id_rsa)
+file_dotfiles=".config/gh/config.yml .ssh/config"
 
 #==============
 # Remove old dot flies
 #==============
-for dotfile in $dotfiles; do
+for dotfile in $dotfiles $file_dotfiles; do
   sudo rm -rf "$HOME"/"$dotfile" > /dev/null 2>&1
 done
 #==============
@@ -51,7 +57,8 @@ done
 # Allow overriding with files of matching names in the custom-configs dir
 #==============
 SYMLINKS=()
-for dotfile in $dotfiles; do
+for dotfile in $dotfiles $file_dotfiles; do
+  mkdir -p "$(dirname "$HOME/$dotfile")"
   ln -sf "$(pwd)"/"$dotfile" "$HOME"/"$dotfile"
   SYMLINKS+=("$dotfile")
 done
@@ -85,6 +92,19 @@ if ! command -v opencode &> /dev/null; then
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     npm install -g opencode-ai
+fi
+
+#==============
+# Install pnpm and the codegraph MCP server (used by opencode.json)
+#==============
+if ! command -v pnpm &> /dev/null; then
+    echo "Installing pnpm..."
+    corepack enable pnpm 2>/dev/null || npm install -g pnpm
+fi
+
+if ! command -v codegraph &> /dev/null; then
+    echo "Installing codegraph (MCP code-intelligence server)..."
+    pnpm add -g @colbymchenry/codegraph
 fi
 
 #==============
@@ -175,6 +195,15 @@ fi
 echo "Installing tmux plugins..."
 # Install plugins using TPM
 "$HOME/.config/tmux/plugins/tpm/bin/install_plugins"
+
+#==============
+# Optional: install everything from the Brewfile for full machine parity
+# Run with:  FULL_BREW_BUNDLE=1 bash install.sh
+#==============
+if [ "${FULL_BREW_BUNDLE:-0}" = "1" ]; then
+    echo "Installing all packages from Brewfile..."
+    brew bundle --file "$(pwd)/Brewfile"
+fi
 
 #==============
 # Restore iTerm profile
