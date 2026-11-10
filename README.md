@@ -4,7 +4,7 @@ This repository contains my configuration files. It helps me configure my Mac to
 
 ## Requirements
 
-The following tools are required to get the best out of this configuration. `install.sh` installs the essentials; run `brew bundle` (or `FULL_BREW_BUNDLE=1 bash install.sh`) to install everything listed in the [Brewfile](./Brewfile).
+The following tools are required to get the best out of this configuration. `install.sh` installs the essentials; run `brew bundle install --force` (or `FULL_BREW_BUNDLE=1 bash install.sh`) to install everything listed in the [Brewfile](./Brewfile).
 
 | Name                                                       | Install Command                                |
 | ---------------------------------------------------------- | ---------------------------------------------- |
@@ -51,7 +51,7 @@ For full machine parity, also install everything in the Brewfile:
 ```bash
 (cd ~/dotfiles && FULL_BREW_BUNDLE=1 bash install.sh)
 # or
-(cd ~/dotfiles && brew bundle)
+(cd ~/dotfiles && brew bundle install --force)
 ```
 
 ## What gets linked

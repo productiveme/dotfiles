@@ -207,7 +207,14 @@ echo "Installing tmux plugins..."
 #==============
 if [ "${FULL_BREW_BUNDLE:-0}" = "1" ]; then
     echo "Installing all packages from Brewfile..."
-    brew bundle --file "$(pwd)/Brewfile"
+    # --force is needed on machines set up by older versions of Homebrew. Those
+    # installs left real .app bundles inside Caskroom/<cask>/<version>/, so a
+    # normal upgrade aborts with:
+    #   Error: <cask>: It seems there is already an App at
+    #   '/opt/homebrew/Caskroom/<cask>/<version>/<App>.app'.
+    # It also lets Homebrew replace apps that live in /Applications but were
+    # never installed through brew (e.g. a manually downloaded Discord/Brave).
+    brew bundle install --file "$(pwd)/Brewfile" --force
 fi
 
 #==============
