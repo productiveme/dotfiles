@@ -24,7 +24,7 @@ The following tools are required to get the best out of this configuration. `ins
 
 ## Setup
 
-1. Clone this repo to your home folder (as `~/dotfiles`, not `~/.dotfiles`)
+1. Clone this repo to your home folder as `~/.dotfiles`
 
 ```bash
 git clone git@github.com:productiveme/dotfiles.git ~/dotfiles

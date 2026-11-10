@@ -102,6 +102,11 @@ if ! command -v pnpm &> /dev/null; then
     corepack enable pnpm 2>/dev/null || npm install -g pnpm
 fi
 
+# pnpm refuses global installs unless its bin dir is on PATH
+# (interactive shells get this from .zshrc; this script's shell does not)
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME/bin:$PNPM_HOME:$PATH"
+
 if ! command -v codegraph &> /dev/null; then
     echo "Installing codegraph (MCP code-intelligence server)..."
     pnpm add -g @colbymchenry/codegraph
