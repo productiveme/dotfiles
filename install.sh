@@ -95,6 +95,20 @@ if ! command -v opencode &> /dev/null; then
 fi
 
 #==============
+# Install devd (local *.dev.localhost domains via Caddy + dnsmasq)
+#==============
+if ! command -v devd &> /dev/null; then
+    echo "Installing devd..."
+    # Source nvm if not already available
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    npm install -g devdom
+    # One-time setup: brew deps, dnsmasq LaunchAgent, /etc/resolver, caddy daemon.
+    # Prompts for sudo password and is idempotent — safe to re-run.
+    devd install
+fi
+
+#==============
 # Install pnpm and the codegraph MCP server (used by opencode.json)
 #==============
 if ! command -v pnpm &> /dev/null; then
