@@ -4,6 +4,7 @@
 
 tap "my-monkeys/tap"
 tap "porter-dev/porter"
+tap "stablyai/orca"
 
 # ---------------------------------------------------------------------------
 # Shell & terminal
@@ -55,6 +56,7 @@ brew "simdjson"
 # ---------------------------------------------------------------------------
 brew "hf"     # Hugging Face client library
 brew "ollama"
+cask "stablyai/orca/orca"
 
 # ---------------------------------------------------------------------------
 # Browsers & PWAs
@@ -85,7 +87,7 @@ cask "mongodb-compass"
 cask "ngrok"
 cask "obs"
 cask "obsidian"
-cask "opensuperwhisper"
+cask "my-monkeys/tap/openmonkeywhisper"
 cask "orbstack"
 cask "slack"
 cask "spotify"
