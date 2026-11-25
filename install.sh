@@ -225,8 +225,3 @@ if [ "${FULL_BREW_BUNDLE:-0}" = "1" ]; then
     # never installed through brew (e.g. a manually downloaded Discord/Brave).
     brew bundle install --file "$(pwd)/Brewfile" --force
 fi
-
-#==============
-# Restore iTerm profile
-#==============
-cp -f "$(pwd)/com.googlecode.iterm2.plist" "$HOME/Library/Preferences/com.googlecode.iterm2.plist"

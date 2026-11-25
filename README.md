@@ -44,7 +44,6 @@ The install script will automatically:
 - Install tree-sitter CLI (required for Neovim syntax highlighting)
 - Install OpenCode CLI, pnpm and the codegraph MCP server
 - Create symlinks to configuration files
-- Restore the iTerm2 profile
 
 For full machine parity, also install everything in the Brewfile:
 
@@ -69,7 +68,7 @@ Directory-level symlinks into `~/dotfiles`:
 | `~/.config/tmux`         | tmux config                          |
 | `~/.config/ghostty`      | Ghostty terminal config              |
 | `~/.config/git`          | git ignore defaults                  |
-| `~/.config/opencode`     | OpenCode config, CLI settings, skills |
+| `~/.config/opencode`     | OpenCode config and CLI settings  |
 | `~/.config/starship.toml`| starship prompt                      |
 
 File-level symlinks (so the parent directory can keep machine-local state):
