@@ -5,5 +5,8 @@
     "leader": "ctrl+a",
     "messages_previous": "ctrl+alt+k",
     "messages_next": "ctrl+alt+j"
-  }
+  },
+  "plugin": [
+    "file://$HOME/.config/opencode/plugins/orca-opencode-status-tui/tui.js"
+  ]
 }

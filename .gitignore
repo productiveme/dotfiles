@@ -23,3 +23,10 @@
 .DS_Store
 tags
 tags.*
+
+# --- Installed agent/tool add-ons (machine-local, re-installed per machine) ---
+.config/opencode/agent/
+.config/opencode/plugins/
+.config/opencode/skills/alph-e
+.config/opencode/skills/pad-e
+.config/opencode/skills/paw-e

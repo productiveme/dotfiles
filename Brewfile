@@ -64,6 +64,7 @@ cask "stablyai/orca/orca"
 brew "firefoxpwa"
 cask "brave-browser"
 cask "google-chrome"
+cask "zen"
 
 # ---------------------------------------------------------------------------
 # Applications
@@ -74,6 +75,7 @@ cask "android-commandlinetools"
 cask "android-studio"
 cask "another-redis-desktop-manager"
 cask "audacity"
+cask "bitwarden"
 cask "bruno"
 cask "discord"
 cask "flutter"

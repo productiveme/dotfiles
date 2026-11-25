@@ -8,7 +8,7 @@ description: Use when working on a productive.me studio project, especially on c
 The canonical procedure for this skill lives in the studio wiki:
 
 - from a project root: `../wiki/skills/llm-wiki.md`
-- fallback: `/Users/jaco/Projects/wiki/skills/llm-wiki.md`
+- fallback: `~/Projects/wiki/skills/llm-wiki.md`
 
 Read that file now and follow it. The wiki version is the source of truth. Do not duplicate
 or edit it here.

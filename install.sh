@@ -86,13 +86,8 @@ fi
 #==============
 # Install OpenCode CLI
 #==============
-if ! command -v opencode &> /dev/null; then
-    echo "Installing OpenCode CLI..."
-    # Source nvm if not already available
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    npm install -g opencode-ai
-fi
+# Installed via Homebrew (see Brewfile). Do NOT install the npm package
+# (opencode-ai) — it shadows the brew binary on PATH and pins an old version.
 
 #==============
 # Install devd (local *.dev.localhost domains via Caddy + dnsmasq)
