@@ -16,7 +16,7 @@ The following tools are required to get the best out of this configuration. `ins
 | [universal ctags](https://github.com/universal-ctags/ctags) | `brew install universal-ctags`                 |
 | [starship](https://starship.rs)                            | `brew install starship`                        |
 | [gh](https://github.com/cli/cli)                           | `brew install gh`                              |
-| [OpenCode](https://opencode.ai)                            | `npm install -g opencode-ai`                   |
+| [OpenCode](https://opencode.ai)                            | `brew install opencode` (Brewfile)             |
 | [codegraph](https://github.com/colbymchenry/codegraph)     | `pnpm add -g @colbymchenry/codegraph`          |
 | NodeJS                                                     | `brew install nvm` (or the nvm install script) |
 | Python 3.13+                                               | `brew install pyenv` <br/> `pyenv install 3.13.12` <br/> `pyenv global 3.13.12` |
@@ -90,7 +90,7 @@ These are deliberately **not** tracked (see `.gitignore`) and are recreated per 
 - `~/.ssh/id_*`, `~/.ssh/*_rsa`, `~/.ssh/agent/` — private keys
 
 Secrets that a config needs at runtime are read from the environment, e.g. `LINEAR_API_KEY`
-and `FIGMA_API_KEY` in `~/.config/opencode/opencode.json`.
+in `~/.config/opencode/opencode.json`.
 
 ## Notes
 

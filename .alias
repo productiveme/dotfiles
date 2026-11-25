@@ -69,6 +69,11 @@ function each-dirty-submodule() {
 }
 
 # alias ai="aider --editor-model openai/o3-mini --model claude-3-7-sonnet-latest --no-auto-commit --auto-lint --no-show-model-warnings"
-alias ai="opencode"
-alias p=pnpm
+# --standalone keeps the server (and therefore the MCP servers) inside this
+# process, so {env:...} in opencode.json resolves from this shell - needed for
+# per-project direnv values such as LINEAR_API_KEY. The directory is passed as
+# an argument rather than cd'd into, because leaving a direnv directory reverts
+# its exported variables before opencode could inherit them.
+alias ai="opencode --standalone"
+alias ay='opencode --standalone ~/firstmate'
 

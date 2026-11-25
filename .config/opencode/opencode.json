@@ -25,19 +25,6 @@
       ],
       "enabled": true
     },
-    "Framelink MCP for Figma": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "figma-developer-mcp",
-        "--stdio"
-      ],
-      "environment": {
-        "FIGMA_API_KEY": "{env:FIGMA_API_KEY}"
-      },
-      "enabled": true
-    },
     "linear": {
       "type": "remote",
       "url": "https://mcp.linear.app/mcp",
